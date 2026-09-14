@@ -2,8 +2,7 @@
 
 Valheim stuff.
 
-> [!NOTE]
-> Stuff will be compatible with Valheim 1.0, not older, possibly later.
+The stuff in question will be compatible with Valheim 1.0, not older, possibly later.
 
 ## Portal Finder
 
@@ -14,43 +13,30 @@ Script for finding all your portals in a world, also highlighting unlinked/inact
 
 ### Usage
 
-Run [`portal_finder.py`](/portal_finder.py) in the Valheim world save folder. They're located here (on Linux):
+Run [`portal_finder.py`](/portal_finder.py) in the world save folder. They're located here (on Linux):
 
 ```
 ~/.config/unity3d/IronGate/Valheim/worlds_local/
 ```
 
-### Remote Execution
-
-Cool for running without adding any extra files on your PC.
-
-> [!WARNING]
-> The following command sequence only works if you only have one world. Otherwise I think it errors because `cd` has too many args? Idk too lazy to try because I don't really care. This is not the intended way to run the script anyways.
+Just put the script in a world folder located there and cd to it and run it like this:
 
 ```
-cd $HOME/.config/unity3d/IronGate/Valheim/worlds_local/
-cd $(find . -mindepth 1 -maxdepth 1 -type d -printf '%f\n' | sed -E 's/_backup_.*$//' | sort -u)
-python3 <(wget -qO- https://valheim.nikoboi.dev/portal_finder.py)
+python3 portal_finder.py
 ```
-
-> [!NOTE]
-> [`valheim.nikoboi.dev`](https://valheim.nikoboi.dev/) resolves to this repository.
-
-> [!NOTE]
-> If HTTPS doesn't work yet, try HTTP. SSL cert might still be being made for [`valheim.nikoboi.dev`](https://valheim.nikoboi.dev/).
 
 ### Fully Automated Script
 
-This is the one tap script. No need to change directories or download or move any files. Just open a terminal and paste this:
+If you're lazy like me you can use open a terminal and paste this and it'll do everything for you.
 
 ```
 bash <(wget -qO- https://valheim.nikoboi.dev/portal_finder.sh)
 ```
 
 > [!NOTE]
-> Same HTTP/HTTPS/SSL note as above. Script uses HTTPS though to get the Python script, so you might have to do it manually for now. It should work by tomorrow morning, September 15th 2026.
+> [`valheim.nikoboi.dev`](https://valheim.nikoboi.dev/) resolves to this repository.
 
-This script will find the worlds for you, and prompt you if you have multiple.
+This script will find all your worlds and then prompt you if you have multiple, and then run the Python script remotely. It will leave no files behind and won't modify anything.
 
 ### Example Output
 
@@ -80,7 +66,7 @@ Using world: World_Name
 Directory:  /home/user/.config/unity3d/IronGate/Valheim/worlds_local/World_Name
 
 Portal Tags Found in World_Name:
-Tag: 'Coast'   (Found in 2 file/chunk[s])
+Tag: 'Coast'      (Found in 2 file/chunk[s])
 Tag: 'NW Outpost' (Found in 2 file/chunk[s])
 Tag: 'Peninsula'  (Found in 1 file/chunk[s])
 Tag: 'SW Outpost' (Found in 2 file/chunk[s])
