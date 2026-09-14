@@ -55,9 +55,6 @@ Tag: 'Peninsula' only found once, missing linked portal.
 user@pc:~/.config/unity3d/IronGate/Valheim/worlds_local/World_Name$
 ```
 
-> [!NOTE]
-> Script must be in the directory for this exact command to work. Just place it there, It's Easy, Mmm'kay.
-
 Running the script remotely:
 
 ```
