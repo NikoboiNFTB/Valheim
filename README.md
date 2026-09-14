@@ -13,13 +13,13 @@ Script for finding all your portals in a world save.
 Run [`portal_finder.py`](/portal_finder.py) in the Valheim world save folder located here:
 
 ```
-~/.config/unity3d/IronGate/Valheim/worlds_local/World_Name
+~/.config/unity3d/IronGate/Valheim/worlds_local/$WORLD_NAME
 ```
 
 ### Example usage and output:
 
 ```
-user@pc:~/.config/unity3d/IronGate/Valheim/worlds_local/World_Name$ python3 portal_finder.py
+$USER@$PC:~/.config/unity3d/IronGate/Valheim/worlds_local/$WORLD_NAME$ python3 portal_finder.py
 
 --- Portal Tags Found in Save ---
 Tag: 'Castle'  (Found in 2 file/chunk[s])
@@ -29,7 +29,7 @@ Tag: 'NW Outpost'  (Found in 2 file/chunk[s])
 Tag: 'Peninsula'  (Found in 1 file/chunk[s]) # NOTE: This is an example of a portal without a partner, i.e. only found once.
 Tag: 'SE Outpost'  (Found in 2 file/chunk[s])
 Tag: 'SW Outpost'  (Found in 2 file/chunk[s])
-user@pc:~/.config/unity3d/IronGate/Valheim/worlds_local/World_Name$
+$USER@$PC:~/.config/unity3d/IronGate/Valheim/worlds_local/$WORLD_NAME$
 ```
 
 You do not need to download and move the script, you can also just run this automated script:
