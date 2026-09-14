@@ -43,6 +43,7 @@ WORLD_DIR="$WORLDS_DIR/$world"
 
 echo "Using world: $world"
 echo "Directory:  $WORLD_DIR"
+echo
 
 cd "$WORLD_DIR"
 

@@ -53,7 +53,7 @@ def scan_world_files():
 
     world_save_name = os.path.basename(os.getcwd())
 
-    print(f"Portal Tags Found in {world_save_name}:\n")
+    print(f"Portal Tags Found in {world_save_name}:")
 
     if not found_tags:
         print("No portal tags found.")
@@ -74,7 +74,7 @@ def scan_world_files():
     ]
 
     if missing:
-        print("\nWarning:")
+        print("\nWarning[s]:")
         for tag in missing:
             print(f"Tag: '{tag}' only found once, missing linked portal.")
 
