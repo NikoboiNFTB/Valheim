@@ -17,7 +17,7 @@ Run [`portal_finder.py`](/portal_finder.py) in the Valheim world save folder loc
 ~/.config/unity3d/IronGate/Valheim/worlds_local/
 ```
 
-### Example usage and output:
+### Example Usage and Output:
 
 ```
 user@pc:~/.config/unity3d/IronGate/Valheim/worlds_local/World_Name$ python3 portal_finder.py
