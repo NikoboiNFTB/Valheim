@@ -45,7 +45,7 @@ Running the script directly:
 ```
 user@pc:~/.config/unity3d/IronGate/Valheim/worlds_local/World_Name$ python3 portal_finder.py
 Portal Tags Found in World_Name:
-Tag: 'Coast'   (Found in 2 file/chunk[s])
+Tag: 'Coast'      (Found in 2 file/chunk[s])
 Tag: 'NW Outpost' (Found in 2 file/chunk[s])
 Tag: 'Peninsula'  (Found in 1 file/chunk[s])
 Tag: 'SW Outpost' (Found in 2 file/chunk[s])
