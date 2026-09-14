@@ -2,43 +2,65 @@
 
 Valheim stuff.
 
-Stuff will be compatible with Valheim 1.0, not older.
+> [!NOTE]
+> Stuff will be compatible with Valheim 1.0, not older, possibly later.
 
-## [Portal Finder](/portal_finder.py)
+## Portal Finder
 
-Script for finding all your portals in a world save.
+Script for finding all your portals in a world, also highlighting unlinked/inactive portals.
 
 ### Usage
 
 Run [`portal_finder.py`](/portal_finder.py) in the Valheim world save folder located here:
 
 ```
-~/.config/unity3d/IronGate/Valheim/worlds_local/$WORLD_NAME
+~/.config/unity3d/IronGate/Valheim/worlds_local/
 ```
 
 ### Example usage and output:
 
 ```
-$USER@$PC:~/.config/unity3d/IronGate/Valheim/worlds_local/$WORLD_NAME$ python3 portal_finder.py
+user@pc:~/.config/unity3d/IronGate/Valheim/worlds_local/World_Name$ python3 portal_finder.py
+Portal Tags Found in World_Name:
 
---- Portal Tags Found in Save ---
-Tag: 'Castle'  (Found in 2 file/chunk[s])
-Tag: 'N Island'  (Found in 2 file/chunk[s])
-Tag: 'NE Outpost'  (Found in 2 file/chunk[s])
-Tag: 'NW Outpost'  (Found in 2 file/chunk[s])
-Tag: 'Peninsula'  (Found in 1 file/chunk[s]) # NOTE: This is an example of a portal without a partner, i.e. only found once.
-Tag: 'SE Outpost'  (Found in 2 file/chunk[s])
-Tag: 'SW Outpost'  (Found in 2 file/chunk[s])
-$USER@$PC:~/.config/unity3d/IronGate/Valheim/worlds_local/$WORLD_NAME$
+Tag: 'Castle'     (Found in 2 file/chunk[s])
+Tag: 'NE Outpost' (Found in 2 file/chunk[s])
+Tag: 'NW Outpost' (Found in 2 file/chunk[s])
+Tag: 'Peninsula'  (Found in 2 file/chunk[s])
+user@pc:~/.config/unity3d/IronGate/Valheim/worlds_local/World_Name$
 ```
 
-### Automated Script (Coming Soon)
+> [!NOTE]
+> Script must be in the directory for this exact command to work. Just place it there, It's Easy, Mmm'kay.
 
-You do not need to download and move the script, you can also just run this automated script:
+### Remote Execution
+
+Cool for running without adding any extra files on your PC.
+
+> [!WARNING]
+> This only works if you only have one world. Otherwise I think it errors because `cd` has too many args?
 
 ```
-COMING SOON
+cd $HOME/.config/unity3d/IronGate/Valheim/worlds_local/
+cd $(find . -mindepth 1 -maxdepth 1 -type d -printf '%f\n' | sed -E 's/_backup_.*$//' | sort -u)
+python3 <(wget -qO- https://valheim.nikoboi.dev/portal_finder.py)
 ```
+
+> [!NOTE]
+> If HTTPS doesn't work yet, try HTTP.
+
+### Fully Automated Script
+
+This is a one tap script. No need to change directories or download or move any files. Just open a terminal and paste this:
+
+```
+bash <(wget -qO- https://valheim.nikoboi.dev/portal_finder.sh)
+```
+
+> [!NOTE]
+> If HTTPS doesn't work yet, try HTTP. Although the script also uses HTTPS to get the Python script, so you might have to do it manually for now. It should work by tomorrow morning, September 15th 2026.
+
+This script will find the worlds for you, and prompt you if you have multiple.
 
 ## Contributing
 
