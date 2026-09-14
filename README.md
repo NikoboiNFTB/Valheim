@@ -32,9 +32,9 @@ Tag: 'SW Outpost'  (Found in 2 file/chunk[s])
 $USER@$PC:~/.config/unity3d/IronGate/Valheim/worlds_local/$WORLD_NAME$
 ```
 
-You do not need to download and move the script, you can also just run this automated script:
+### Automated Script (Coming Soon)
 
-### Automated Script
+You do not need to download and move the script, you can also just run this automated script:
 
 ```
 COMING SOON
