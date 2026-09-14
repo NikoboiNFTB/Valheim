@@ -2,13 +2,19 @@
 
 Valheim stuff.
 
+Stuff will be compatible with Valheim 1.0, not older.
+
 ## [Portal Finder](/portal_finder.py)
 
 Script for finding all your portals in a world save.
 
 ### Usage
 
-Run [`portal_finder.py`](/portal_finder.py) in the Valheim world save folder located here `~/.config/unity3d/IronGate/Valheim/worlds_local/World_Name`.
+Run [`portal_finder.py`](/portal_finder.py) in the Valheim world save folder located here:
+
+```
+~/.config/unity3d/IronGate/Valheim/worlds_local/World_Name
+```
 
 ### Example usage and output:
 
@@ -24,6 +30,14 @@ Tag: 'Peninsula'  (Found in 1 file/chunk[s]) # NOTE: This is an example of a por
 Tag: 'SE Outpost'  (Found in 2 file/chunk[s])
 Tag: 'SW Outpost'  (Found in 2 file/chunk[s])
 user@pc:~/.config/unity3d/IronGate/Valheim/worlds_local/World_Name$
+```
+
+You do not need to download and move the script, you can also just run this automated script:
+
+### Automated Script
+
+```
+COMING SOON
 ```
 
 ## Contributing
