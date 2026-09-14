@@ -47,7 +47,7 @@ python3 <(wget -qO- https://valheim.nikoboi.dev/portal_finder.py)
 ```
 
 > [!NOTE]
-> If HTTPS doesn't work yet, try HTTP.
+> If HTTPS doesn't work yet, try HTTP. SSL cert might still be being made for [`valheim.nikoboi.dev`](https://valheim.nikoboi.dev/).
 
 ### Fully Automated Script
 
@@ -58,7 +58,7 @@ bash <(wget -qO- https://valheim.nikoboi.dev/portal_finder.sh)
 ```
 
 > [!NOTE]
-> If HTTPS doesn't work yet, try HTTP. Although the script also uses HTTPS to get the Python script, so you might have to do it manually for now. It should work by tomorrow morning, September 15th 2026.
+> Same HTTP/HTTPS/SSL note as above. Script uses HTTPS though to get the Python script, so you might have to do it manually for now. It should work by tomorrow morning, September 15th 2026.
 
 This script will find the worlds for you, and prompt you if you have multiple.
 
