@@ -38,9 +38,9 @@ bash <(wget -qO- https://valheim.nikoboi.dev/portal_finder.sh)
 
 This script will find all your worlds and then prompt you if you have multiple, and then run the Python script remotely. It will leave no files behind and won't modify anything.
 
-### Example Output
+### Example Outputs
 
-Running the script directly:
+#### Running the script directly
 
 ```
 user@pc:~/.config/unity3d/IronGate/Valheim/worlds_local/World_Name$ python3 portal_finder.py
@@ -55,10 +55,17 @@ Tag: 'Peninsula' only found once, missing linked portal.
 user@pc:~/.config/unity3d/IronGate/Valheim/worlds_local/World_Name$
 ```
 
-Running the script remotely:
+#### Running the script remotely
 
 ```
 user@pc:~$ bash <(wget -qO- https://valheim.nikoboi.dev/portal_finder.sh)
+Select a Valheim world:
+
+1) World_Name
+2) World2
+
+Enter number: 1
+
 Using world: World_Name
 Directory:  /home/user/.config/unity3d/IronGate/Valheim/worlds_local/World_Name
 

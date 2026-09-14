@@ -29,6 +29,7 @@ else
 
 	echo
 	read -rp "Enter number: " selection
+	echo
 
 	if ! [[ "$selection" =~ ^[0-9]+$ ]] ||
 		((selection < 1 || selection > ${#worlds[@]})); then
