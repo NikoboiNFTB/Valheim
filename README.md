@@ -14,7 +14,7 @@ Script for finding all your portals in a world, also highlighting unlinked/inact
 TL;DR:
 
 ```
-bash <(wget -qO- https://valheim.nikoboi.dev/portal_finder/script.sh)
+bash <(wget -qO- https://valheim.nikoboi.dev/portal-finder/script.sh)
 ```
 
 > [!NOTE]
@@ -39,7 +39,7 @@ python3 script.py
 If you're lazy like me you can use open a terminal and paste this and it'll do everything for you.
 
 ```
-bash <(wget -qO- https://valheim.nikoboi.dev/portal_finder/script.sh)
+bash <(wget -qO- https://valheim.nikoboi.dev/portal-finder/script.sh)
 ```
 
 > [!NOTE]
@@ -52,7 +52,7 @@ This script will find all your worlds and then prompt you if you have multiple, 
 Script can be "installed" as an "app". Basically put into `/usr/local/bin/` to be runnable as a command. Install it using this:
 
 ```
-bash <(wget -qO- https://valheim.nikoboi.dev/portal_finder/install)
+bash <(wget -qO- https://valheim.nikoboi.dev/portal-finder/install.sh)
 ```
 
 This will install `script.sh` and `script.py` as `/usr/local/bin/valheim_portal_finder` and `/usr/local/bin/valheim_portal_finder.py`, respectively.
@@ -83,7 +83,7 @@ user@pc:~/.config/unity3d/IronGate/Valheim/worlds_local/World_Name$
 #### Running the script remotely
 
 ```
-user@pc:~$ bash <(wget -qO- https://valheim.nikoboi.dev/portal_finder/script.sh)
+user@pc:~$ bash <(wget -qO- https://valheim.nikoboi.dev/portal-finder/script.sh)
 Select a Valheim world:
 
 1) World_Name

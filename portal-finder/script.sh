@@ -54,5 +54,5 @@ if [[ -f $COMMAND.py ]]; then
 	python3 $COMMAND.py
 else
 	echo "Local script not found, using remote." && echo
-	python3 <(wget -qO- https://valheim.nikoboi.dev/portal_finder/script.py)
+	python3 <(wget -qO- https://valheim.nikoboi.dev/portal-finder/script.py)
 fi
