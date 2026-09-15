@@ -22,7 +22,7 @@ bash <(wget -qO- https://valheim.nikoboi.dev/portal-finder/script.sh)
 
 ### Usage
 
-Run [`script.py`](/script.py) in the world save folder. They're located here (on Linux):
+Run [`script.py`](/portal-finder/script.py) in the world save folder. They're located here (on Linux):
 
 ```
 ~/.config/unity3d/IronGate/Valheim/worlds_local/
