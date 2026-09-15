@@ -44,6 +44,22 @@ bash <(wget -qO- https://valheim.nikoboi.dev/portal_finder.sh)
 
 This script will find all your worlds and then prompt you if you have multiple, and then run the Python script remotely. It will leave no files behind and won't modify anything.
 
+### Install
+
+Script can be "installed" as an "app". Basically put into `/usr/local/bin/` to be runnable as a command. Install it using this:
+
+```
+bash <(wget -qO- https://valheim.nikoboi.dev/install)
+```
+
+This will install `portal_finder.sh` and `portal_finder.py` as `/usr/local/bin/valheim_portal_finder` and `/usr/local/bin/valheim_portal_finder.py`, respectively.
+
+Then use by just running:
+
+```
+valheim_portal_finder
+```
+
 ### Example Outputs
 
 #### Running the script directly

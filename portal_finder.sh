@@ -48,4 +48,10 @@ echo
 
 cd "$WORLD_DIR"
 
-python3 <(wget -qO- http://valheim.nikoboi.dev/portal_finder.py)
+if [[ -f /usr/local/bin/valheim_portal_finder.py ]]; then
+	echo "Local script found, using it." && echo
+	python3 /usr/local/bin/valheim_portal_finder.py
+else
+	echo "Local script not found, using remote." && echo
+	python3 <(wget -qO- http://valheim.nikoboi.dev/portal_finder.py)
+fi
