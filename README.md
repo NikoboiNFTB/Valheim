@@ -1,5 +1,8 @@
 # Valheim
 
+> [!WARNING]
+> New folder structure is currenly being tested, return in a bit to get a tested experience.
+
 Valheim stuff.
 
 The stuff in question will be compatible with Valheim 1.0, not older, possibly later.
@@ -11,7 +14,7 @@ Script for finding all your portals in a world, also highlighting unlinked/inact
 TL;DR:
 
 ```
-bash <(wget -qO- https://valheim.nikoboi.dev/portal_finder.sh)
+bash <(wget -qO- https://valheim.nikoboi.dev/portal_finder/script.sh)
 ```
 
 > [!NOTE]
@@ -19,7 +22,7 @@ bash <(wget -qO- https://valheim.nikoboi.dev/portal_finder.sh)
 
 ### Usage
 
-Run [`portal_finder.py`](/portal_finder.py) in the world save folder. They're located here (on Linux):
+Run [`script.py`](/script.py) in the world save folder. They're located here (on Linux):
 
 ```
 ~/.config/unity3d/IronGate/Valheim/worlds_local/
@@ -28,7 +31,7 @@ Run [`portal_finder.py`](/portal_finder.py) in the world save folder. They're lo
 Just put the script in a world folder located there and cd to it and run it like this:
 
 ```
-python3 portal_finder.py
+python3 script.py
 ```
 
 ### Fully Automated Script
@@ -36,7 +39,7 @@ python3 portal_finder.py
 If you're lazy like me you can use open a terminal and paste this and it'll do everything for you.
 
 ```
-bash <(wget -qO- https://valheim.nikoboi.dev/portal_finder.sh)
+bash <(wget -qO- https://valheim.nikoboi.dev/portal_finder/script.sh)
 ```
 
 > [!NOTE]
@@ -49,10 +52,10 @@ This script will find all your worlds and then prompt you if you have multiple, 
 Script can be "installed" as an "app". Basically put into `/usr/local/bin/` to be runnable as a command. Install it using this:
 
 ```
-bash <(wget -qO- https://valheim.nikoboi.dev/install)
+bash <(wget -qO- https://valheim.nikoboi.dev/portal_finder/install)
 ```
 
-This will install `portal_finder.sh` and `portal_finder.py` as `/usr/local/bin/valheim_portal_finder` and `/usr/local/bin/valheim_portal_finder.py`, respectively.
+This will install `script.sh` and `script.py` as `/usr/local/bin/valheim_portal_finder` and `/usr/local/bin/valheim_portal_finder.py`, respectively.
 
 Then use by just running:
 
@@ -65,7 +68,7 @@ valheim_portal_finder
 #### Running the script directly
 
 ```
-user@pc:~/.config/unity3d/IronGate/Valheim/worlds_local/World_Name$ python3 portal_finder.py
+user@pc:~/.config/unity3d/IronGate/Valheim/worlds_local/World_Name$ python3 script.py
 Portal Tags Found in World_Name:
 Tag: 'Coast'      (Found in 2 file/chunk[s])
 Tag: 'NW Outpost' (Found in 2 file/chunk[s])
@@ -80,7 +83,7 @@ user@pc:~/.config/unity3d/IronGate/Valheim/worlds_local/World_Name$
 #### Running the script remotely
 
 ```
-user@pc:~$ bash <(wget -qO- https://valheim.nikoboi.dev/portal_finder.sh)
+user@pc:~$ bash <(wget -qO- https://valheim.nikoboi.dev/portal_finder/script.sh)
 Select a Valheim world:
 
 1) World_Name

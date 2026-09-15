@@ -3,6 +3,7 @@
 set -euo pipefail
 
 WORLDS_DIR="$HOME/.config/unity3d/IronGate/Valheim/worlds_local"
+COMMAND="/usr/local/bin/valheim_portal_finder"
 
 # Find all world directories and remove backup suffixes.
 mapfile -t worlds < <(
@@ -48,10 +49,10 @@ echo
 
 cd "$WORLD_DIR"
 
-if [[ -f /usr/local/bin/valheim_portal_finder.py ]]; then
+if [[ -f $COMMAND.py ]]; then
 	echo "Local script found, using it." && echo
-	python3 /usr/local/bin/valheim_portal_finder.py
+	python3 $COMMAND.py
 else
 	echo "Local script not found, using remote." && echo
-	python3 <(wget -qO- http://valheim.nikoboi.dev/portal_finder.py)
+	python3 <(wget -qO- https://valheim.nikoboi.dev/portal_finder/script.py)
 fi
