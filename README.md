@@ -1,8 +1,5 @@
 # Valheim
 
-> [!WARNING]
-> New folder structure is currenly being tested, return in a bit to get a tested experience.
-
 Valheim stuff.
 
 The stuff in question will be compatible with Valheim 1.0, not older, possibly later.
