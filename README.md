@@ -8,6 +8,12 @@ The stuff in question will be compatible with Valheim 1.0, not older, possibly l
 
 Script for finding all your portals in a world, also highlighting unlinked/inactive portals.
 
+TL;DR:
+
+```
+bash <(wget -qO- https://valheim.nikoboi.dev/portal_finder.sh)
+```
+
 > [!NOTE]
 > Your world will need to be a local save, Valheim defaults to Cloud save. Fix it in "Manage saves" in the main menu.
 
@@ -79,6 +85,10 @@ Warning[s]:
 Tag: 'Peninsula' only found once, missing linked portal.
 user@pc:~$
 ```
+
+### Why?
+
+Ever had a Graydwarf slowly chip away or a Troll destroy your portal? Don't remember its tag? Then just save your world and run the script. It'll find out which one it was instantly.
 
 ## Contributing
 
