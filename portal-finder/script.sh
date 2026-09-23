@@ -50,9 +50,11 @@ echo
 cd "$WORLD_DIR"
 
 if [[ -f $COMMAND.py ]]; then
-	echo "Local script found, using it." && echo
+	echo "Local script found in '/usr/local/bin/', using it."
+	echo
 	python3 $COMMAND.py
 else
-	echo "Local script not found, using remote." && echo
+	echo "Local script not found, using remote."
+	echo
 	python3 <(wget -qO- https://valheim.nikoboi.dev/portal-finder/script.py)
 fi
