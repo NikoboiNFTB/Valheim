@@ -1,0 +1,48 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <AssemblyName>ResourceScaledCarryWeight</AssemblyName>
+    <RootNamespace>ResourceScaledCarryWeight</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="UnityEngine">
+      <HintPath>$(GameManagedDir)/UnityEngine.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="BepInEx">
+      <HintPath>$(BepInExDir)/BepInEx.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="0Harmony">
+      <HintPath>$(BepInExDir)/0Harmony.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="assembly_valheim">
+      <HintPath>$(GameManagedDir)/assembly_valheim.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>$(GameManagedDir)/UnityEngine.CoreModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+  <Target Name="ValidateGameReferences" BeforeTargets="ResolveReferences">
+    <Error Condition="'$(BepInExDir)' == ''"
+      Text="Set BepInExDir to the active r2modman profile's BepInEx/core directory." />
+    <Error Condition="'$(GameManagedDir)' == ''"
+      Text="Set GameManagedDir to Valheim/valheim_Data/Managed." />
+    <Error Condition="!Exists('$(BepInExDir)/BepInEx.dll')"
+      Text="BepInEx.dll not found under BepInExDir: $(BepInExDir)" />
+    <Error Condition="!Exists('$(BepInExDir)/0Harmony.dll')"
+      Text="0Harmony.dll not found under BepInExDir: $(BepInExDir)" />
+    <Error Condition="!Exists('$(GameManagedDir)/assembly_valheim.dll')"
+      Text="assembly_valheim.dll not found under GameManagedDir: $(GameManagedDir)" />
+    <Error Condition="!Exists('$(GameManagedDir)/UnityEngine.CoreModule.dll')"
+      Text="UnityEngine.CoreModule.dll not found under GameManagedDir: $(GameManagedDir)" />
+  </Target>
+</Project>
